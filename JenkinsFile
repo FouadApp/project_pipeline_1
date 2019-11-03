@@ -1,5 +1,19 @@
-@Library('demo-library-shared')_
-stage('Get pipeline') {
-    echo 'Choose pipeline '
-    myPipeline 'my_pipeline_1'
+pipeline {
+
+  agent any
+
+
+
+stages {
+
+     stage ("Test"){
+       steps {
+         sh '''
+           echo "Hellow World"
+         '''
+       }
+     }
+}
+
+
 }
